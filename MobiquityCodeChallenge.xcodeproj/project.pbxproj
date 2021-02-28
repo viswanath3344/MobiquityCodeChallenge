@@ -7,14 +7,30 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1851843F25EBFD8F0056601A /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = 1851843E25EBFD8E0056601A /* Help.html */; };
 		188DF02525E9FA7600D43F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF02425E9FA7600D43F50 /* AppDelegate.swift */; };
-		188DF02725E9FA7600D43F50 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF02625E9FA7600D43F50 /* SceneDelegate.swift */; };
 		188DF02925E9FA7600D43F50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF02825E9FA7600D43F50 /* ViewController.swift */; };
 		188DF02C25E9FA7600D43F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188DF02A25E9FA7600D43F50 /* Main.storyboard */; };
 		188DF02E25E9FA7D00D43F50 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 188DF02D25E9FA7D00D43F50 /* Assets.xcassets */; };
 		188DF03125E9FA7D00D43F50 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188DF02F25E9FA7D00D43F50 /* LaunchScreen.storyboard */; };
 		188DF03C25E9FA7E00D43F50 /* MobiquityCodeChallengeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF03B25E9FA7E00D43F50 /* MobiquityCodeChallengeTests.swift */; };
 		188DF04725E9FA7E00D43F50 /* MobiquityCodeChallengeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF04625E9FA7E00D43F50 /* MobiquityCodeChallengeUITests.swift */; };
+		18D5063F25EB956A005C4C0E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5063E25EB956A005C4C0E /* HelpViewController.swift */; };
+		18D5064425EBB544005C4C0E /* SettingsDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5064325EBB544005C4C0E /* SettingsDataController.swift */; };
+		18D5064925EBB5A9005C4C0E /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D5064825EBB5A9005C4C0E /* Enums.swift */; };
+		18F06E5125EA2AC500EE3FAD /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E5025EA2AC500EE3FAD /* SettingsViewController.swift */; };
+		18F06E5B25EA2C1B00EE3FAD /* LocationSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E4B25EA29FB00EE3FAD /* LocationSelectionViewController.swift */; };
+		18F06E6825EA477D00EE3FAD /* FavouriteLocationsDataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E6725EA477D00EE3FAD /* FavouriteLocationsDataController.swift */; };
+		18F06E6D25EA500300EE3FAD /* FaviouritesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E6C25EA500300EE3FAD /* FaviouritesTableViewCell.swift */; };
+		18F06E7525EA64A300EE3FAD /* WeatherDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E7425EA64A300EE3FAD /* WeatherDetailsViewController.swift */; };
+		18F06E8525EAF1BF00EE3FAD /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E8425EAF1BF00EE3FAD /* Extensions.swift */; };
+		18F06E8F25EAFD9D00EE3FAD /* WeatherViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E8E25EAFD9D00EE3FAD /* WeatherViewModel.swift */; };
+		18F06E9425EB010500EE3FAD /* APIStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E9325EB010500EE3FAD /* APIStrings.swift */; };
+		18F06EA225EB5BE900EE3FAD /* FavouriteLocation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E6225EA46D400EE3FAD /* FavouriteLocation.swift */; };
+		18F06EB125EB5DC200EE3FAD /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06E8925EAF8BD00EE3FAD /* APIService.swift */; };
+		18F06EB625EB5E6100EE3FAD /* CurrentWeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06EB525EB5E6100EE3FAD /* CurrentWeatherInfo.swift */; };
+		18F06EBB25EB5E9600EE3FAD /* ForecastWeatherInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06EBA25EB5E9600EE3FAD /* ForecastWeatherInfo.swift */; };
+		18F06EC725EB60DB00EE3FAD /* ForecastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F06EC625EB60DB00EE3FAD /* ForecastCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,9 +51,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1851843E25EBFD8E0056601A /* Help.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
 		188DF02125E9FA7600D43F50 /* MobiquityCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiquityCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188DF02425E9FA7600D43F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		188DF02625E9FA7600D43F50 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		188DF02825E9FA7600D43F50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		188DF02B25E9FA7600D43F50 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		188DF02D25E9FA7D00D43F50 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,6 +65,22 @@
 		188DF04225E9FA7E00D43F50 /* MobiquityCodeChallengeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MobiquityCodeChallengeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		188DF04625E9FA7E00D43F50 /* MobiquityCodeChallengeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MobiquityCodeChallengeUITests.swift; sourceTree = "<group>"; };
 		188DF04825E9FA7E00D43F50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		18D5063E25EB956A005C4C0E /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
+		18D5064325EBB544005C4C0E /* SettingsDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsDataController.swift; sourceTree = "<group>"; };
+		18D5064825EBB5A9005C4C0E /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		18F06E4B25EA29FB00EE3FAD /* LocationSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationSelectionViewController.swift; sourceTree = "<group>"; };
+		18F06E5025EA2AC500EE3FAD /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		18F06E6225EA46D400EE3FAD /* FavouriteLocation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteLocation.swift; sourceTree = "<group>"; };
+		18F06E6725EA477D00EE3FAD /* FavouriteLocationsDataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavouriteLocationsDataController.swift; sourceTree = "<group>"; };
+		18F06E6C25EA500300EE3FAD /* FaviouritesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaviouritesTableViewCell.swift; sourceTree = "<group>"; };
+		18F06E7425EA64A300EE3FAD /* WeatherDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherDetailsViewController.swift; sourceTree = "<group>"; };
+		18F06E8425EAF1BF00EE3FAD /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		18F06E8925EAF8BD00EE3FAD /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		18F06E8E25EAFD9D00EE3FAD /* WeatherViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherViewModel.swift; sourceTree = "<group>"; };
+		18F06E9325EB010500EE3FAD /* APIStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIStrings.swift; sourceTree = "<group>"; };
+		18F06EB525EB5E6100EE3FAD /* CurrentWeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrentWeatherInfo.swift; sourceTree = "<group>"; };
+		18F06EBA25EB5E9600EE3FAD /* ForecastWeatherInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastWeatherInfo.swift; sourceTree = "<group>"; };
+		18F06EC625EB60DB00EE3FAD /* ForecastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +131,15 @@
 		188DF02325E9FA7600D43F50 /* MobiquityCodeChallenge */ = {
 			isa = PBXGroup;
 			children = (
-				188DF02425E9FA7600D43F50 /* AppDelegate.swift */,
-				188DF02625E9FA7600D43F50 /* SceneDelegate.swift */,
-				188DF02825E9FA7600D43F50 /* ViewController.swift */,
+				18F06E7925EA66CC00EE3FAD /* Models */,
+				18F06EA625EB5D0300EE3FAD /* Common */,
+				18F06EBF25EB5FFF00EE3FAD /* Controllers */,
+				18F06EAA25EB5D1500EE3FAD /* Webservice */,
+				18F06EC425EB602100EE3FAD /* DataControllers */,
+				18F06EC525EB603600EE3FAD /* Cells */,
+				18F06EC025EB601100EE3FAD /* ViewModels */,
 				188DF02A25E9FA7600D43F50 /* Main.storyboard */,
+				1851843E25EBFD8E0056601A /* Help.html */,
 				188DF02D25E9FA7D00D43F50 /* Assets.xcassets */,
 				188DF02F25E9FA7D00D43F50 /* LaunchScreen.storyboard */,
 				188DF03225E9FA7D00D43F50 /* Info.plist */,
@@ -126,6 +163,73 @@
 				188DF04825E9FA7E00D43F50 /* Info.plist */,
 			);
 			path = MobiquityCodeChallengeUITests;
+			sourceTree = "<group>";
+		};
+		18F06E7925EA66CC00EE3FAD /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				18F06E6225EA46D400EE3FAD /* FavouriteLocation.swift */,
+				18F06EB525EB5E6100EE3FAD /* CurrentWeatherInfo.swift */,
+				18F06EBA25EB5E9600EE3FAD /* ForecastWeatherInfo.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		18F06EA625EB5D0300EE3FAD /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				188DF02425E9FA7600D43F50 /* AppDelegate.swift */,
+				18F06E9325EB010500EE3FAD /* APIStrings.swift */,
+				18D5064825EBB5A9005C4C0E /* Enums.swift */,
+				18F06E8425EAF1BF00EE3FAD /* Extensions.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		18F06EAA25EB5D1500EE3FAD /* Webservice */ = {
+			isa = PBXGroup;
+			children = (
+				18F06E8925EAF8BD00EE3FAD /* APIService.swift */,
+			);
+			path = Webservice;
+			sourceTree = "<group>";
+		};
+		18F06EBF25EB5FFF00EE3FAD /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				188DF02825E9FA7600D43F50 /* ViewController.swift */,
+				18D5063E25EB956A005C4C0E /* HelpViewController.swift */,
+				18F06E4B25EA29FB00EE3FAD /* LocationSelectionViewController.swift */,
+				18F06E5025EA2AC500EE3FAD /* SettingsViewController.swift */,
+				18F06E7425EA64A300EE3FAD /* WeatherDetailsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		18F06EC025EB601100EE3FAD /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				18F06E8E25EAFD9D00EE3FAD /* WeatherViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		18F06EC425EB602100EE3FAD /* DataControllers */ = {
+			isa = PBXGroup;
+			children = (
+				18F06E6725EA477D00EE3FAD /* FavouriteLocationsDataController.swift */,
+				18D5064325EBB544005C4C0E /* SettingsDataController.swift */,
+			);
+			path = DataControllers;
+			sourceTree = "<group>";
+		};
+		18F06EC525EB603600EE3FAD /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				18F06E6C25EA500300EE3FAD /* FaviouritesTableViewCell.swift */,
+				18F06EC625EB60DB00EE3FAD /* ForecastCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +336,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				188DF03125E9FA7D00D43F50 /* LaunchScreen.storyboard in Resources */,
+				1851843F25EBFD8F0056601A /* Help.html in Resources */,
 				188DF02E25E9FA7D00D43F50 /* Assets.xcassets in Resources */,
 				188DF02C25E9FA7600D43F50 /* Main.storyboard in Resources */,
 			);
@@ -258,9 +363,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18D5064425EBB544005C4C0E /* SettingsDataController.swift in Sources */,
+				18F06E6825EA477D00EE3FAD /* FavouriteLocationsDataController.swift in Sources */,
+				18F06EBB25EB5E9600EE3FAD /* ForecastWeatherInfo.swift in Sources */,
+				18F06E8525EAF1BF00EE3FAD /* Extensions.swift in Sources */,
+				18F06E7525EA64A300EE3FAD /* WeatherDetailsViewController.swift in Sources */,
+				18F06E9425EB010500EE3FAD /* APIStrings.swift in Sources */,
+				18F06E8F25EAFD9D00EE3FAD /* WeatherViewModel.swift in Sources */,
+				18F06E6D25EA500300EE3FAD /* FaviouritesTableViewCell.swift in Sources */,
+				18F06EB625EB5E6100EE3FAD /* CurrentWeatherInfo.swift in Sources */,
+				18F06EC725EB60DB00EE3FAD /* ForecastCollectionViewCell.swift in Sources */,
 				188DF02925E9FA7600D43F50 /* ViewController.swift in Sources */,
+				18F06EA225EB5BE900EE3FAD /* FavouriteLocation.swift in Sources */,
+				18D5063F25EB956A005C4C0E /* HelpViewController.swift in Sources */,
 				188DF02525E9FA7600D43F50 /* AppDelegate.swift in Sources */,
-				188DF02725E9FA7600D43F50 /* SceneDelegate.swift in Sources */,
+				18F06E5B25EA2C1B00EE3FAD /* LocationSelectionViewController.swift in Sources */,
+				18F06EB125EB5DC200EE3FAD /* APIService.swift in Sources */,
+				18D5064925EBB5A9005C4C0E /* Enums.swift in Sources */,
+				18F06E5125EA2AC500EE3FAD /* SettingsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -438,6 +558,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobiquityCodeChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -456,6 +577,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = MobiquityCodeChallenge/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
