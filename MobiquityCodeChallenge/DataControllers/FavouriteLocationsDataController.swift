@@ -16,9 +16,13 @@ class FavouriteLocationsDataController: NSObject {
         self.getDataFromUserDefaults()
     }
     
-    func addLocation(location: FavouriteLocation)  {
-        locations.append(location)
-        saveDataToUserDefaults()
+    func addLocation(location: FavouriteLocation) -> Bool  {
+        if !checkForExists(location: location) {
+            locations.append(location)
+            saveDataToUserDefaults()
+            return true
+        }
+        return false
     }
     
     func removeLocation(location: FavouriteLocation) {
@@ -42,6 +46,11 @@ class FavouriteLocationsDataController: NSObject {
             }
             
         }
+    }
+    
+    func checkForExists(location: FavouriteLocation) -> Bool  {
+       return locations.contains(where: {$0.city == location.city && $0.country == location.country})
+       
     }
     
 }

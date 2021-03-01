@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1851843F25EBFD8F0056601A /* Help.html in Resources */ = {isa = PBXBuildFile; fileRef = 1851843E25EBFD8E0056601A /* Help.html */; };
+		187FBDAD25ECB891004627BF /* DataControllerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 187FBDAC25ECB890004627BF /* DataControllerTests.swift */; };
 		188DF02525E9FA7600D43F50 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF02425E9FA7600D43F50 /* AppDelegate.swift */; };
 		188DF02925E9FA7600D43F50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188DF02825E9FA7600D43F50 /* ViewController.swift */; };
 		188DF02C25E9FA7600D43F50 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 188DF02A25E9FA7600D43F50 /* Main.storyboard */; };
@@ -52,6 +53,7 @@
 
 /* Begin PBXFileReference section */
 		1851843E25EBFD8E0056601A /* Help.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = Help.html; sourceTree = "<group>"; };
+		187FBDAC25ECB890004627BF /* DataControllerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataControllerTests.swift; sourceTree = "<group>"; };
 		188DF02125E9FA7600D43F50 /* MobiquityCodeChallenge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobiquityCodeChallenge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		188DF02425E9FA7600D43F50 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		188DF02825E9FA7600D43F50 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -151,6 +153,7 @@
 			isa = PBXGroup;
 			children = (
 				188DF03B25E9FA7E00D43F50 /* MobiquityCodeChallengeTests.swift */,
+				187FBDAC25ECB890004627BF /* DataControllerTests.swift */,
 				188DF03D25E9FA7E00D43F50 /* Info.plist */,
 			);
 			path = MobiquityCodeChallengeTests;
@@ -388,6 +391,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				187FBDAD25ECB891004627BF /* DataControllerTests.swift in Sources */,
 				188DF03C25E9FA7E00D43F50 /* MobiquityCodeChallengeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

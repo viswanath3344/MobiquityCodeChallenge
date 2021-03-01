@@ -66,14 +66,14 @@ class WeatherDetailsViewController: UIViewController {
             
             DispatchQueue.main.async {
                 if let temparature = self.weatherViewModel.weatherInfo.main?.temp{
-                    self.temparatureValueLabel.text = String(temparature)  + self.getUnitsForTemparature()
+                    self.temparatureValueLabel.text = String(temparature)  + SettingsDataController.shared.getUnitsForTemparature()
                     
                 }
                 if let wind = self.weatherViewModel.weatherInfo.wind?.speed{
-                    self.windSpeedValueLabel.text = String(wind) + self.getUnitsForWind()
+                    self.windSpeedValueLabel.text = String(wind) + SettingsDataController.shared.getUnitsForWind()
                 }
                 if let humadity = self.weatherViewModel.weatherInfo.main?.humidity{
-                    self.humadityValueLabel.text = String(humadity) + "%"
+                    self.humadityValueLabel.text = String(humadity) + SettingsDataController.shared.getUnitsForHumidity()
                 }
                 
                 self.rainChancesValueLabel.text = "N/A"
@@ -86,48 +86,17 @@ class WeatherDetailsViewController: UIViewController {
         self.weatherViewModel.callFuncToGetForecastWeatherData(location: selectedLoc)
         self.weatherViewModel.bindForecastWeatherViewModelToController = {
 
-            self.forecastWeatherList = self.weatherViewModel.forecastWeatherInfo.list
+            guard let forecaseWeatherList = self.weatherViewModel.forecastWeatherInfo.list else {
+                return
+            }
+            self.forecastWeatherList = forecaseWeatherList
             DispatchQueue.main.async {
                 self.collectionView.reloadData()
             }
         }
         
     }
-    
-    func getUnitsForTemparature() -> String  {
-        switch SettingsDataController.shared.selectedUnit {
-        case .metric:
-            return TemparatureUnits.metric.rawValue
-        case .imperial:
-            return TemparatureUnits.imperial.rawValue
-        }
-    }
-    
-    func getUnitsForWind() -> String  {
-        switch SettingsDataController.shared.selectedUnit {
-        case .metric:
-            return WindUnits.metric.rawValue
-        case .imperial:
-            return WindUnits.imperial.rawValue
-        }
-    }
-    
-    func getFormattedDate(timeStamp:Int) -> String  {
-        
-        let date = Date(timeIntervalSince1970: TimeInterval(timeStamp))
-        let dateFormatter = DateFormatter()
-        
-        switch SettingsDataController.shared.selectedDateFormat {
-        case .format1:
-            dateFormatter.dateFormat = DateFormats.format1.rawValue
-        case .format2:
-            dateFormatter.dateFormat = DateFormats.format2.rawValue
-        }
-        return dateFormatter.string(from: date)
-    }
-    
-   
-    
+
 }
 
 extension WeatherDetailsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
@@ -143,11 +112,11 @@ extension WeatherDetailsViewController: UICollectionViewDelegate, UICollectionVi
         
         let weatherObj = forecastWeatherList[indexPath.row]
         
-        cell.dateValueLabel.text = getFormattedDate(timeStamp: weatherObj.dt)
-        cell.temparatureValueLabel.text = String(weatherObj.main.temp) + self.getUnitsForTemparature()
-        cell.windSpeedValueLabel.text =  String(weatherObj.wind.speed) + self.getUnitsForWind()
-        cell.humadityValueLabel.text =    String(weatherObj.main.humidity) + "%"
-        cell.rainChancesValueLabel.text =  String(weatherObj.pop) + "%"
+        cell.dateValueLabel.text = SettingsDataController.shared.getFormattedDate(timeStamp: weatherObj.dt)
+        cell.temparatureValueLabel.text = String(weatherObj.main.temp) + SettingsDataController.shared.getUnitsForTemparature()
+        cell.windSpeedValueLabel.text =  String(weatherObj.wind.speed) + SettingsDataController.shared.getUnitsForWind()
+        cell.humadityValueLabel.text =    String(weatherObj.main.humidity) + SettingsDataController.shared.getUnitsForHumidity()
+        cell.rainChancesValueLabel.text =  String(weatherObj.pop) + SettingsDataController.shared.getUnitsForRainChances()
         
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.borderWidth = 1

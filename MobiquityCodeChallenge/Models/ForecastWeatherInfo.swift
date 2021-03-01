@@ -11,9 +11,10 @@ import Foundation
 // MARK: - Welcome
 struct ForecastWeather: Codable {
     let cod: String
-    let message, cnt: Int
-    let list: [WeatherList]
-    let city: CityStruct
+    let message: Int
+    let cnt: Int
+    let list: [WeatherList]?
+    let city: CityStruct?
 }
 
 // MARK: - City

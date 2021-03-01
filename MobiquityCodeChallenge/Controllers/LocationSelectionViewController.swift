@@ -56,8 +56,11 @@ class LocationSelectionViewController: UIViewController, UIGestureRecognizerDele
         guard let location = selectedLocation else {
             return
         }
-        FavouriteLocationsDataController.shared.addLocation(location: location)
-        self.navigationController?.popViewController(animated: true)
+        if !FavouriteLocationsDataController.shared.addLocation(location: location){
+            showToast(message: "Location is already exists ", view: view)
+        }else{
+            self.navigationController?.popViewController(animated: true)
+        }
     }
     
     private func clearMap()  { // To Remove previously selected location.

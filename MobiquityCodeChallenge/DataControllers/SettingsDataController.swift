@@ -32,7 +32,14 @@ class SettingsDataController: NSObject {
         UserDefaults.standard.setValue(selectedDateFormat.rawValue, forKey: "dateFormat")
     }
     
-    private func getDataFromUserDefaults(){  // get faviourite locations from user defaults
+    func resetSettings(){
+        UserDefaults.standard.removeObject(forKey: "Units")
+        UserDefaults.standard.removeObject(forKey: "dateFormat")
+        selectedUnit = Units.metric
+        selectedDateFormat = DateFormats.format1
+    }
+    
+     func getDataFromUserDefaults(){  // get faviourite locations from user defaults
         if let unit = UserDefaults.standard.value(forKey:"Units") as? String {
             if let unit = Units(rawValue: unit)  {
                 selectedUnit = unit
@@ -44,6 +51,46 @@ class SettingsDataController: NSObject {
                 selectedDateFormat = dateFormat
             }
         }
+    }
+    
+    func getUnitsForTemparature() -> String  {
+        switch selectedUnit {
+        case .metric:
+            return TemparatureUnits.metric.rawValue
+        case .imperial:
+            return TemparatureUnits.imperial.rawValue
+        }
+    }
+    
+    func getUnitsForWind() -> String  {
+        switch selectedUnit {
+        case .metric:
+            return WindUnits.metric.rawValue
+        case .imperial:
+            return WindUnits.imperial.rawValue
+        }
+    }
+    
+    func getFormattedDate(timeStamp:Int) -> String  {
+        
+        let date = Date(timeIntervalSince1970: TimeInterval(timeStamp))
+        let dateFormatter = DateFormatter()
+        
+        switch selectedDateFormat {
+        case .format1:
+            dateFormatter.dateFormat = DateFormats.format1.rawValue
+        case .format2:
+            dateFormatter.dateFormat = DateFormats.format2.rawValue
+        }
+        return dateFormatter.string(from: date)
+    }
+    
+    func getUnitsForRainChances() -> String {
+        return "%"
+    }
+    
+    func getUnitsForHumidity() -> String {
+        return "%"
     }
     
 }

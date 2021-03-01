@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  MobiquityCodeChallenge
 //
-//  Created by Viswanath Reddy on 27/02/21.
+//  Created by apple on 27/02/21.
 //
 
 import UIKit
@@ -16,7 +16,7 @@ class ViewController: UIViewController,UISearchResultsUpdating {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpNavigationItems()
+        setUpNavigationBarItems()
         setupSearchController()
         
         // Do any additional setup after loading the view.
@@ -29,20 +29,14 @@ class ViewController: UIViewController,UISearchResultsUpdating {
     }
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        //        searchController.searchBar.text = ""
-        //        searchController.isActive = false
-        
-        // searchController.dismiss(animated: false, completion: nil)
     }
     
-    func setUpNavigationItems()  {
-       
+    func setUpNavigationBarItems()  {
         self.title = "Favourite Locations"
         self.navigationItem.leftBarButtonItem = UIBarButtonItem(image: UIImage(named: "location"), style: .plain, target: self, action: #selector(mapViewAction))
-        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(settingsAction)),  UIBarButtonItem(title: "HELP", style: .done, target: self, action: #selector(helpButtonTapped))]
+        self.navigationItem.rightBarButtonItems = [UIBarButtonItem(image: UIImage(named: "settings"), style: .plain, target: self, action: #selector(settingsAction)),  UIBarButtonItem(title: "Help", style: .done, target: self, action: #selector(helpButtonTapped))]
         
     }
-    
     
     func setupSearchController() {
         searchController.searchBar.placeholder = "Type something here to search"
@@ -79,7 +73,6 @@ class ViewController: UIViewController,UISearchResultsUpdating {
         self.navigationController?.pushViewController(helpVC, animated: true)
     }
     
-    
     func updateSearchResults(for searchController: UISearchController) {
         if let searchText = searchController.searchBar.text, !searchText.isEmpty {
             filteredLocations = FavouriteLocationsDataController.shared.locations.filter { location in
@@ -98,7 +91,7 @@ extension ViewController: UITableViewDelegate,UITableViewDataSource{
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
         if filteredLocations.count == 0 {
-            tableView.setEmptyMessage("No favourites locations")
+            tableView.setEmptyMessage("No Favourite locations")
         } else {
             tableView.restore()
         }

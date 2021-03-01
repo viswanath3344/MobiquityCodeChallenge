@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  MobiquityCodeChallenge
 //
-//  Created by Viswanath Reddy on 27/02/21.
+//  Created by Apple on 27/02/21.
 //
 
 import UIKit

@@ -7,7 +7,7 @@
 
 import Foundation
 
-let apiKey = "a5cd2be4d882fa1260b3d4b196c6ecdc"
+let apiKey = "8c45c56902851dce11086ba4c54f8e0e"
 let weatherBaseURL = "http://api.openweathermap.org/data/2.5/weather?lat=#LAT#&lon=#LON#&appid=\(apiKey)&units=#UNITS#"
 
 let forecaseBaseURL = "http://api.openweathermap.org/data/2.5/forecast?lat=#LAT#&lon=#LON#&appid=\(apiKey)&units=#UNITS#"
